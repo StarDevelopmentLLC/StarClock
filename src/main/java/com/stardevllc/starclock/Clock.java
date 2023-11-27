@@ -89,28 +89,23 @@ public abstract class Clock<T extends ClockSnapshot> {
         for (CallbackHolder<T> holder : this.callbacks.values()) {
             ClockCallback<T> callback = holder.getCallback();
             if (callback == null) {
-                //System.out.println("Holder had an empty callback.");
                 continue;
             }
             
             if (holder.getPeriod() <= 0) {
-                //System.out.println("Holder has a period less than or equal to 0");
                 continue;
             }
             
             if (!shouldCallback(holder)) {
-                //System.out.println("Should callback returned false");
                 continue;
             }
             
             holder.setLastRun(timeProperty.get());
             callback.callback(snapshot);
-            //System.out.println("Calledback");
         }
         
         if (endCondition != null) {
             if (endCondition.shouldEnd(snapshot)) {
-                //System.out.println("Clock end condition met");
                 cancel();
             }
         } 
