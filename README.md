@@ -1,5 +1,5 @@
 # StarClock
-This is a library for managing timers and stopwatches, but it can be adapted by either extending the Timer or Stopwatch classes or by extending the Clock class directly
+This is a library for managing timers and stopwatches, but it can be adapted by either extending the Timer or Stopwatch classes or by extending the Clock class directly  
 [![](https://www.jitpack.io/v/StarDevelopmentLLC/StarClock.svg)](https://www.jitpack.io/#StarDevelopmentLLC/StarClock)
 ## To use this Library
 You must add JitPack as a repo, below is for Gradle  
