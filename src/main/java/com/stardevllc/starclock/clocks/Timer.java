@@ -42,7 +42,7 @@ public class Timer extends Clock<TimerSnapshot> {
             if (holder.getLastRun() == -1) {
                 return holder.getPeriod() <= this.getTime();
             } else {
-                long nextRun = holder.getLastRun() + holder.getPeriod();
+                long nextRun = holder.getLastRun() - holder.getPeriod();
                 return this.getTime() <= nextRun;
             }
         }
