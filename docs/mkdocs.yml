@@ -1,0 +1,28 @@
+site_name: StarClock Wiki
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.path
+    - content.code.copy
+    - content.code.annotate
+nav:
+  - Home: 'index.md'
+  - Usage: 
+      - 'Getting Started': 'gettingstarted.md'
+      - Installation: 'installation.md'
+      - Stopwatch: 'stopwatch.md'
+      - Timer: 'timer.md'
+  - Concepts: 
+      - Clocks: 'clocks.md'
+      - Callbacks: 'callbacks.md'
+repo_url: 'https://github.com/StarDevelopmentLLC/StarClock'
+repo_name: 'StarClock'
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
